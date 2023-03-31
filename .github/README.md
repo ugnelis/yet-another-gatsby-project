@@ -11,6 +11,7 @@ The project has:
 - Global styles
 - SEO
 - Layouts
+- Animated SVG
 - Linters
 
 ## Quick start
