@@ -1,3 +1,3 @@
 # yet-another-gatsby-project
 
-Gatsby project that uses styled-component and TypeScript.
+The Gatsby project that uses styled-component and TypeScript.
