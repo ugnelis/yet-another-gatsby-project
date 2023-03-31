@@ -18,7 +18,7 @@ import {
   Paragraph,
   Underline,
 } from 'components/Typography';
-import { StyledIndexPage } from './index.style';
+import { AnimatedSomeSVG, StyledIndexPage } from './index.style';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -50,6 +50,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <Paragraph>
             <Code>Code</Code>
           </Paragraph>
+          <AnimatedSomeSVG />
         </Container>
       </StyledIndexPage>
     </PageLayout>
