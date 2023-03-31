@@ -2,16 +2,19 @@ import styled from 'styled-components';
 import SomeSVG from '/static/images/some.svg';
 
 export const AnimatedSomeSVG = styled(SomeSVG)`
+  width: 8rem;
+  height: 8rem;
+
   #skin {
-    transition: fill 300ms;
+    transition: fill 500ms;
   }
 
   #skin-shadow {
-    transition: fill 300ms;
+    transition: fill 500ms;
   }
 
   #eyes {
-    transition: fill 300ms;
+    transition: fill 100ms;
   }
 
   &:hover {

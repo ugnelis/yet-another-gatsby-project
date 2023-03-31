@@ -9,7 +9,7 @@ dotenv.config({
 const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Yet another Gatsby project',
-    siteUrl: 'https://localhost:8000',
+    siteUrl: 'https://yet-another-gatsby-project.pages.dev',
     description: 'Gatsby project that uses styled-component and TypeScript.',
     image: '/image.png',
   },
@@ -35,7 +35,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /static\/.*\.svg/,
+          include: /static/,
         },
       },
     },

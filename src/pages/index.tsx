@@ -50,7 +50,10 @@ const IndexPage: React.FC<PageProps> = () => {
           <Paragraph>
             <Code>Code</Code>
           </Paragraph>
-          <AnimatedSomeSVG />
+          <Paragraph>
+            Animated SVG: <br />
+            <AnimatedSomeSVG />
+          </Paragraph>
         </Container>
       </StyledIndexPage>
     </PageLayout>
