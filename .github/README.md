@@ -3,6 +3,8 @@
 The [Gatsby](https://www.gatsbyjs.com/docs/) project uses [Styled Components](https://styled-components.com/)
 and [TypeScript](https://www.typescriptlang.org/).
 
+Live demo: [https://yet-another-gatsby-project.pages.dev](https://yet-another-gatsby-project.pages.dev)
+
 The project has:
 
 - Typography definitions
@@ -11,6 +13,7 @@ The project has:
 - Global styles
 - SEO
 - Layouts
+- Animated SVG
 - Linters
 
 ## Quick start
