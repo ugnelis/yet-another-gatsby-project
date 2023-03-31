@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "lf"
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "always",
+        "children": "never",
+        "propElementValues": "always"
+      }
+    ]
+  }
+}
