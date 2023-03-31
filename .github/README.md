@@ -1,6 +1,17 @@
 # yet-another-gatsby-project
 
-The Gatsby project that uses styled-component and TypeScript.
+The [Gatsby](https://www.gatsbyjs.com/docs/) project uses [Styled Components](https://styled-components.com/)
+and [TypeScript](https://www.typescriptlang.org/).
+
+The project has:
+
+- Typography definitions
+- Responsive container
+- Custom fonts example
+- Global styles
+- SEO
+- Layouts
+- Linters
 
 ## Quick start
 
@@ -51,7 +62,7 @@ Example of how to use it:
 
 ```typescript
 import styled from 'styled-components';
-import { breakpointUp, breakpointDown } from 'helpers/style';
+import {breakpointUp, breakpointDown} from 'helpers/style';
 
 /* Component style */
 export const StyledExample = styled.div`
