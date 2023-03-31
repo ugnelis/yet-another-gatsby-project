@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {
-        displayName: true,
+        displayName: process.env.NODE_ENV === 'development',
       },
     },
     // "gatsby-plugin-google-gtag",
