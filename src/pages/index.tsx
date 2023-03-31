@@ -1,5 +1,7 @@
 import React from 'react';
 import type { PageProps } from 'gatsby';
+import { PageLayout } from 'layouts/PageLayout';
+import { Container } from 'components/Container';
 import {
   Bold,
   Code,
@@ -15,36 +17,41 @@ import {
   Paragraph,
   Underline,
 } from 'components/Typography';
+import { StyledIndexPage } from './index.style';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <>
-      <Heading1>Heading1</Heading1>
-      <Heading2>Heading2</Heading2>
-      <Heading3>Heading3</Heading3>
-      <Heading4>Heading4</Heading4>
-      <Heading5>Heading5</Heading5>
-      <Heading6>Heading6</Heading6>
-      <Paragraph>Paragraph</Paragraph>
-      <Paragraph>
-        <Link>Link</Link>
-      </Paragraph>
-      <Paragraph>
-        <InternalLink to={'/'}>Internal Link</InternalLink>
-      </Paragraph>
-      <Paragraph>
-        <Bold>Bold</Bold>
-      </Paragraph>
-      <Paragraph>
-        <Italic>Italic</Italic>
-      </Paragraph>
-      <Paragraph>
-        <Underline>Underline</Underline>
-      </Paragraph>
-      <Paragraph>
-        <Code>Code</Code>
-      </Paragraph>
-    </>
+    <PageLayout>
+      <StyledIndexPage>
+        <Container>
+          <Heading1>Heading1</Heading1>
+          <Heading2>Heading2</Heading2>
+          <Heading3>Heading3</Heading3>
+          <Heading4>Heading4</Heading4>
+          <Heading5>Heading5</Heading5>
+          <Heading6>Heading6</Heading6>
+          <Paragraph>Paragraph</Paragraph>
+          <Paragraph>
+            <Link>Link</Link>
+          </Paragraph>
+          <Paragraph>
+            <InternalLink to={'/'}>Internal Link</InternalLink>
+          </Paragraph>
+          <Paragraph>
+            <Bold>Bold</Bold>
+          </Paragraph>
+          <Paragraph>
+            <Italic>Italic</Italic>
+          </Paragraph>
+          <Paragraph>
+            <Underline>Underline</Underline>
+          </Paragraph>
+          <Paragraph>
+            <Code>Code</Code>
+          </Paragraph>
+        </Container>
+      </StyledIndexPage>
+    </PageLayout>
   );
 };
 
