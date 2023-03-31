@@ -8,16 +8,17 @@ dotenv.config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Yet another Gatby project',
+    title: 'Yet another Gatsby project',
     siteUrl: 'https://localhost:8000',
     description: 'Gatsby project that uses styled-component and TypeScript.',
+    image: '/image.png',
   },
   graphqlTypegen: true,
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Yet another Gatby project`,
+        name: `Yet another Gatsby project`,
         short_name: `Yet another Gatby project`,
         icon: 'static/favicon.svg',
         background_color: `#221d43`,

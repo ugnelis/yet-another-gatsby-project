@@ -1,7 +1,8 @@
 import React from 'react';
-import type { PageProps } from 'gatsby';
+import type { HeadFC, PageProps } from 'gatsby';
 import { PageLayout } from 'layouts/PageLayout';
 import { Container } from 'components/Container';
+import { SEO } from 'components/SEO';
 import {
   Bold,
   Code,
@@ -56,3 +57,5 @@ const IndexPage: React.FC<PageProps> = () => {
 };
 
 export default IndexPage;
+
+export const Head: HeadFC = () => <SEO />;

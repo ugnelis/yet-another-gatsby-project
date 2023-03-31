@@ -1,7 +1,8 @@
 import React from 'react';
-import type { PageProps } from 'gatsby';
+import type { HeadFC, PageProps } from 'gatsby';
 import { Heading1, InternalLink, Paragraph } from 'components/Typography';
 import { BasicLayout } from 'layouts/BasicLayout';
+import { SEO } from 'components/SEO';
 import { StyledNotFoundPage } from './404.style';
 
 const NotFoundPage: React.FC<PageProps> = () => {
@@ -17,3 +18,5 @@ const NotFoundPage: React.FC<PageProps> = () => {
 };
 
 export default NotFoundPage;
+
+export const Head: HeadFC = () => <SEO title={'Not found'} />;
