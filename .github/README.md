@@ -65,7 +65,7 @@ Example of how to use it:
 
 ```typescript
 import styled from 'styled-components';
-import {breakpointUp, breakpointDown} from 'helpers/style';
+import { breakpointUp, breakpointDown } from 'helpers/style';
 
 /* Component style */
 export const StyledExample = styled.div`
