@@ -23,7 +23,7 @@ export const Container = styled.div<ContainerProps>`
     `}
 
   ${(props) =>
-    props.fluid !== true &&
+    props.$fluid !== true &&
     css`
       ${breakpointUp.SM} {
         max-width: 540px;
