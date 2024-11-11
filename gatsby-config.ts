@@ -46,6 +46,22 @@ const config: GatsbyConfig = {
         ignore: ['**/*.style.(js|ts)?(x)'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: process.env.SITE_URL,
+        sitemap: `${process.env.SITE_URL}/sitemap-index.xml`,
+        policy: [
+          {
+            userAgent: '*',
+            ...(process.env.ALLOW_ROBOTS === 'true' ? { allow: '/' } : { disallow: '/' }),
+          },
+        ],
+      },
+    },
   ],
 };
 

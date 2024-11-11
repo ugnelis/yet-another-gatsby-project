@@ -12,6 +12,8 @@ The project has:
 - Custom fonts example
 - Global styles
 - SEO
+- Sitemap
+- Robots.txt
 - Layouts
 - Animated SVG
 - Linters
@@ -41,6 +43,9 @@ npm run build
 ```
 
 The app will be built in the `public` folder.
+
+Please keep in mind that to build the app, the `.env.production` file or the environment variables specified in
+`.env.example` must exist.
 
 ### Linter
 
