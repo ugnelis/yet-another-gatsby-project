@@ -62,6 +62,28 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: '@herob191/gatsby-plugin-react-i18next',
+      options: {
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'lt'],
+        defaultLanguage: 'en',
+        redirect: false,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          nsSeparator: false,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'locale',
+        path: `${__dirname}/src/locales`,
+      },
+    },
   ],
 };
 

@@ -1,0 +1,27 @@
+{
+  "general": {
+    "name": "Dar vienas Gatsby projektas"
+  },
+  "pages": {
+    "home": {
+      "description": "Tekstas lietuviškai"
+    },
+    "not-found": {
+      "title": "Puslapis nerastas",
+      "description": "Grįžti į pradinį puslapį",
+      "return": "Grįžti į svetainę"
+    }
+  },
+  "layouts": {
+    "page-layout": {
+      "header": {
+        "title": "Antraštė"
+      },
+      "footer": {
+        "title": "Poraštė"
+      }
+    }
+  },
+  "components": {
+  }
+}

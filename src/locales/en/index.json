@@ -1,0 +1,27 @@
+{
+  "general": {
+    "name": "Yet another Gatsby project"
+  },
+  "pages": {
+    "home": {
+      "description": "Text in English"
+    },
+    "not-found": {
+      "title": "Not found",
+      "description": "Page not found",
+      "return": "Return to Site"
+    }
+  },
+  "layouts": {
+    "page-layout": {
+      "header": {
+        "title": "Header"
+      },
+      "footer": {
+        "title": "Header"
+      }
+    }
+  },
+  "components": {
+  }
+}
