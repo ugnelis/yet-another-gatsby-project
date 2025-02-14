@@ -11,6 +11,7 @@ The project has:
 - Responsive container
 - Custom fonts example
 - Global styles
+- Multi-language
 - SEO
 - Sitemap
 - Robots.txt
