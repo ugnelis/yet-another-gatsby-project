@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Link as GatsbyLink } from 'gatsby';
 
 const HeadingBase = css`
   margin-top: 0;
@@ -38,23 +37,6 @@ export const Heading5 = styled.h5`
 export const Heading6 = styled.h6`
   ${HeadingBase};
   font-size: 1rem;
-`;
-
-const linkStyle = css`
-  transition: all 100ms;
-  cursor: pointer;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
-export const Link = styled.a`
-  ${linkStyle}
-`;
-
-export const InternalLink = styled(GatsbyLink)`
-  ${linkStyle}
 `;
 
 export const Bold = styled.b``;

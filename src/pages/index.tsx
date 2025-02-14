@@ -1,5 +1,6 @@
 import React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import { graphql, HeadFC, PageProps } from 'gatsby';
+import { useTranslation } from '@herob191/gatsby-plugin-react-i18next';
 import { PageLayout } from 'layouts/PageLayout';
 import { Container } from 'components/Container';
 import { SEO } from 'components/SEO';
@@ -12,46 +13,47 @@ import {
   Heading4,
   Heading5,
   Heading6,
-  InternalLink,
   Italic,
-  Link,
   Paragraph,
   Underline,
 } from 'components/Typography';
+import { InternalLink, Link } from 'components/Link';
 import { AnimatedSomeSVG, StyledIndexPage } from './index.style';
 
 const IndexPage: React.FC<PageProps> = () => {
+  const { t } = useTranslation();
+
   return (
     <PageLayout>
       <StyledIndexPage>
         <Container>
-          <Heading1>Heading1</Heading1>
-          <Heading2>Heading2</Heading2>
-          <Heading3>Heading3</Heading3>
-          <Heading4>Heading4</Heading4>
-          <Heading5>Heading5</Heading5>
-          <Heading6>Heading6</Heading6>
-          <Paragraph>Paragraph</Paragraph>
+          <Heading1>{t('pages.home.heading-1')}</Heading1>
+          <Heading2>{t('pages.home.heading-2')}</Heading2>
+          <Heading3>{t('pages.home.heading-3')}</Heading3>
+          <Heading4>{t('pages.home.heading-4')}</Heading4>
+          <Heading5>{t('pages.home.heading-5')}</Heading5>
+          <Heading6>{t('pages.home.heading-6')}</Heading6>
+          <Paragraph>{t('pages.home.paragraph')}</Paragraph>
           <Paragraph>
-            <Link>Link</Link>
+            <Link>{t('pages.home.link')}</Link>
           </Paragraph>
           <Paragraph>
-            <InternalLink to={'/'}>Internal Link</InternalLink>
+            <InternalLink to={'/'}>{t('pages.home.internal-link')}</InternalLink>
           </Paragraph>
           <Paragraph>
-            <Bold>Bold</Bold>
+            <Bold>{t('pages.home.bold')}</Bold>
           </Paragraph>
           <Paragraph>
-            <Italic>Italic</Italic>
+            <Italic>{t('pages.home.italic')}</Italic>
           </Paragraph>
           <Paragraph>
-            <Underline>Underline</Underline>
+            <Underline>{t('pages.home.underline')}</Underline>
           </Paragraph>
           <Paragraph>
-            <Code>Code</Code>
+            <Code>{t('pages.home.code')}</Code>
           </Paragraph>
           <Paragraph>
-            Animated SVG: <br />
+            {t('pages.home.animated-svg')}: <br />
             <AnimatedSomeSVG />
           </Paragraph>
         </Container>
@@ -63,3 +65,17 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => <SEO />;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
