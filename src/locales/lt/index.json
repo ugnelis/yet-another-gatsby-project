@@ -4,6 +4,19 @@
   },
   "pages": {
     "home": {
+      "heading-1": "Antraštė1",
+      "heading-2": "Antraštė2",
+      "heading-3": "Antraštė3",
+      "heading-4": "Antraštė4",
+      "heading-5": "Antraštė5",
+      "paragraph": "Pastraipa",
+      "link": "Nuoroda",
+      "internal-link": "Vidinė nuoroda",
+      "bold": "Paryškinimas",
+      "italic": "Kursyvas",
+      "underline": "Pabraukimas",
+      "code": "Kodas",
+      "animated-svg": "Animuotas SVG",
       "description": "Tekstas lietuviškai"
     },
     "not-found": {
