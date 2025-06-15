@@ -1,6 +1,20 @@
 import type { GatsbyNode } from 'gatsby';
 import * as path from 'path';
 
+interface MarkdownQueryResult {
+  allMdx: {
+    nodes: {
+      id: string;
+      frontmatter: {
+        slug: string;
+      };
+      internal: {
+        contentFilePath: string;
+      };
+    }[];
+  };
+}
+
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = async ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -33,9 +47,9 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
     return;
   }
 
-  const posts = result.data.allMdx.nodes;
+  const data = result.data as MarkdownQueryResult;
 
-  posts.forEach((node: any) => {
+  data.allMdx.nodes.forEach((node) => {
     createPage({
       path: node.frontmatter.slug,
       component: path.resolve('./src/templates/markdown-page.tsx'),
