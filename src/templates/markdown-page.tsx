@@ -34,12 +34,21 @@ const MarkdownPage: React.FC<MarkdownPageProps> = ({ data, children }) => {
 export default MarkdownPage;
 
 export const query = graphql`
-  query ($id: String!) {
+  query ($id: String!, $language: String!) {
     mdx(id: { eq: $id }) {
       body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
   }
