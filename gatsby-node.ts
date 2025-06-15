@@ -7,6 +7,7 @@ interface MarkdownQueryResult {
       id: string;
       frontmatter: {
         slug: string;
+        language: string;
       };
       internal: {
         contentFilePath: string;
@@ -33,6 +34,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
           id
           frontmatter {
             slug
+            language
           }
           internal {
             contentFilePath
@@ -50,10 +52,15 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   const data = result.data as MarkdownQueryResult;
 
   data.allMdx.nodes.forEach((node) => {
+    const { slug, language } = node.frontmatter;
+
     createPage({
-      path: `/markdown/${node.frontmatter.slug}`,
+      path: `/${language}/markdown/${slug}`,
       component: `${path.resolve('./src/templates/markdown-page.tsx')}?__contentFilePath=${node.internal.contentFilePath}`,
-      context: { id: node.id },
+      context: {
+        id: node.id,
+        language,
+      },
     });
   });
 };
