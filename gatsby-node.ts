@@ -52,7 +52,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   data.allMdx.nodes.forEach((node) => {
     createPage({
       path: node.frontmatter.slug,
-      component: path.resolve('./src/templates/markdown-page.tsx'),
+      component: `${path.resolve('./src/templates/markdown-page.tsx')}?__contentFilePath=${node.internal.contentFilePath}`,
       context: { id: node.id },
     });
   });
