@@ -1,8 +1,10 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { PageLayout } from 'layouts/PageLayout';
 import { Container } from 'components/Container';
 import { Heading1, Paragraph } from 'components/Typography';
+import { MarkdownComponents } from 'components/MarkdownComponents';
 
 interface MarkdownPageProps extends PageProps {
   data: {
@@ -23,7 +25,7 @@ const MarkdownPage: React.FC<MarkdownPageProps> = ({ data, children }) => {
       <Container>
         <Heading1>{frontmatter.title}</Heading1>
         <Paragraph>{frontmatter.date}</Paragraph>
-        {children}
+        <MDXProvider components={MarkdownComponents}>{children}</MDXProvider>
       </Container>
     </PageLayout>
   );
