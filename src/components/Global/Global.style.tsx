@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeType } from 'theme';
 
 const Global = createGlobalStyle`
   *, ::after, ::before {

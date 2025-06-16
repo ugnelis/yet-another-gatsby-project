@@ -5,7 +5,8 @@ import {
   Heading2,
   Heading3,
   Heading4,
-  Heading5, Italic,
+  Heading5,
+  Italic,
   Paragraph,
 } from 'components/Typography';
 

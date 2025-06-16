@@ -41,7 +41,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <InternalLink to={'/'}>{t('pages.home.internal-link')}</InternalLink>
           </Paragraph>
           <Paragraph>
-            <InternalLink to={'/markdown/hello/'}>{t('pages.home.markdown-article-link')}</InternalLink>
+            <InternalLink to={'/markdown/hello/'}>
+              {t('pages.home.markdown-article-link')}
+            </InternalLink>
           </Paragraph>
           <Paragraph>
             <Bold>{t('pages.home.bold')}</Bold>
