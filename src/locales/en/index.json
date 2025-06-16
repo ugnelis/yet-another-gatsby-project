@@ -12,6 +12,7 @@
       "paragraph": "Paragraph",
       "link": "Link",
       "internal-link": "Internal Link",
+      "markdown-article-link": "Markdown Article Link",
       "bold": "Bold",
       "italic": "Italic",
       "underline": "Underline",

@@ -55,7 +55,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
     const { slug, language } = node.frontmatter;
 
     createPage({
-      path: `/${language}/markdown/${slug}`,
+      path: `/markdown/${slug}`,
       component: `${path.resolve('./src/templates/markdown-page.tsx')}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
