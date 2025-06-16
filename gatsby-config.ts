@@ -69,6 +69,7 @@ const config: GatsbyConfig = {
         languages: ['en', 'lt'],
         defaultLanguage: 'en',
         redirect: false,
+        generateDefaultLanguagePage: false,
         i18nextOptions: {
           interpolation: {
             escapeValue: false,

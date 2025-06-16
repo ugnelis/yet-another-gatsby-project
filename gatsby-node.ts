@@ -50,16 +50,31 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   }
 
   const data = result.data as MarkdownQueryResult;
+  const defaultLanguage = 'en';
+  const supportedLanguages = ['en', 'lt'];
 
   data.allMdx.nodes.forEach((node) => {
     const { slug, language } = node.frontmatter;
 
+    const localizedPath =
+      language === defaultLanguage ? `/markdown/${slug}` : `/${language}/markdown/${slug}`;
+
+    reporter.info(`Creating page: ${language} -> ${localizedPath}`);
+
     createPage({
-      path: `/markdown/${slug}`,
-      component: `${path.resolve('./src/templates/markdown-page.tsx')}?__contentFilePath=${node.internal.contentFilePath}`,
+      path: localizedPath,
+      component: `${path.resolve(
+        './src/templates/markdown-page.tsx',
+      )}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
         language,
+        i18n: {
+          language,
+          languages: supportedLanguages,
+          defaultLanguage,
+          originalPath: `/markdown/${slug}`,
+        },
       },
     });
   });
