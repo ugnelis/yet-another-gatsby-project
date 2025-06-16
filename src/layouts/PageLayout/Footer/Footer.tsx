@@ -5,10 +5,12 @@ import { StyledFooter } from './Footer.style';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
+  const year = new Date().getFullYear();
+  const name = t('general.name');
 
   return (
     <StyledFooter>
-      <Container>{t('layouts.page-layout.footer.title')} </Container>
+      <Container>{t('layouts.page-layout.footer.title', { year, name })}</Container>
     </StyledFooter>
   );
 };
