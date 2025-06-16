@@ -69,6 +69,7 @@ const config: GatsbyConfig = {
         languages: ['en', 'lt'],
         defaultLanguage: 'en',
         redirect: false,
+        generateDefaultLanguagePage: false,
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
@@ -82,6 +83,22 @@ const config: GatsbyConfig = {
       options: {
         name: 'locale',
         path: `${__dirname}/src/locales`,
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.md', '.mdx'],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown',
+        path: `${__dirname}/src/markdown`,
       },
     },
   ],

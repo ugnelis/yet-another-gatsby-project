@@ -12,6 +12,7 @@ The project has:
 - Custom fonts example
 - Global styles
 - Multi-language
+- Markdown articles (with multilanguage support)
 - SEO
 - Sitemap
 - Robots.txt
