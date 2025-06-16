@@ -1,5 +1,6 @@
 import type { GatsbyNode } from 'gatsby';
 import * as path from 'path';
+import gatsbyConfig from './gatsby-config';
 
 interface MarkdownQueryResult {
   allMdx: {
@@ -50,8 +51,17 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   }
 
   const data = result.data as MarkdownQueryResult;
-  const defaultLanguage = 'en';
-  const supportedLanguages = ['en', 'lt'];
+
+  const plugins = gatsbyConfig.plugins ?? [];
+
+  const i18nPlugin = plugins.find(
+    (plugin) =>
+      typeof plugin !== 'string' && plugin.resolve === '@herob191/gatsby-plugin-react-i18next',
+  );
+
+  const i18nOptions = (i18nPlugin as { options?: any })?.options || {};
+  const defaultLanguage = i18nOptions.defaultLanguage || 'en';
+  const supportedLanguages = i18nOptions.languages || ['en'];
 
   data.allMdx.nodes.forEach((node) => {
     const { slug, language } = node.frontmatter;
