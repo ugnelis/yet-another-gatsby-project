@@ -33,7 +33,7 @@
         "title": "Antraštė"
       },
       "footer": {
-        "title": "Poraštė"
+        "title": "© {{year}} {{name}}"
       }
     }
   },

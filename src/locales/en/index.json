@@ -33,7 +33,7 @@
         "title": "Header"
       },
       "footer": {
-        "title": "Footer"
+        "title": "© {{year}} {{name}}"
       }
     }
   },
